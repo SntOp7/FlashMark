@@ -16,11 +16,12 @@ import java.time.LocalDate;
 public class Producto {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private String titulo;
     private String descripcion;
-    private double precio;
+    private Double precio;
+    @Enumerated(EnumType.STRING)
     private EstadoProducto estado;
     private LocalDate fechaPublicacion;
     private String imagen;

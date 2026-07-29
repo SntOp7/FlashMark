@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -15,10 +15,10 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Mensaje {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private String texto;
-    private LocalDate fecha;
+    private LocalDateTime fecha;
     @ManyToOne
     private Usuario emisor;
     @ManyToOne
@@ -26,7 +26,7 @@ public class Mensaje {
     @ManyToOne
     private Producto producto;
 
-    public Mensaje(LocalDate fecha, String texto, Usuario emisor, Usuario receptor, Producto producto) {
+    public Mensaje(LocalDateTime fecha, String texto, Usuario emisor, Usuario receptor, Producto producto) {
         this.fecha = fecha;
         this.texto = texto;
         this.emisor = emisor;

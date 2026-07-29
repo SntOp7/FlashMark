@@ -1,13 +1,12 @@
 package co.edu.uniquindio.flashmark.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -19,6 +18,9 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private String nombre;
+
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
 
     public Categoria( String nombre) {
         this.nombre = nombre;
