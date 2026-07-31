@@ -11,4 +11,5 @@ public interface UsuarioService {
     void eliminarUsuario(String id);
     Usuario buscarUsuario(String id);
     List<Usuario> listarUsuarios();
+    Usuario iniciarSesion(String correo, String contrasenia);
 }

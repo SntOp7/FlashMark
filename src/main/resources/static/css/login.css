@@ -1,5 +1,4 @@
 body {
-
     margin: 0;
 
     font-family: Arial, Helvetica, sans-serif;
@@ -16,9 +15,8 @@ body {
 
     min-height: 100vh;
 
-    .contenedor-registro{
-
-        background-color: #333333;
+    .contenedor-login{
+        background-color: #1A1A1A;
 
         padding: 40px;
 
@@ -29,18 +27,18 @@ body {
         box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .campo{
+    .campo {
         display: flex;
         flex-direction: column;
         margin-bottom: 18px;
     }
 
-    .campo label{
+    .campo label {
         margin-bottom: 6px;
         font-weight: bold;
     }
 
-    .campo input{
+    .campo input {
         background-color: black;
         padding: 10px;
         font-size: 16px;
@@ -50,15 +48,15 @@ body {
         outline: none;
     }
 
-    .campo input:focus{
+    .campo input:focus {
         border: 3px solid #C70000;
     }
 
-    .campo input:hover{
+    .campo input:hover {
         border: 3px solid #C70000;
     }
 
-    .btn-registrarse {
+    .btn-iniciar-sesion {
         background-color: #FF4D4D;
         color: #333;
         border: none;
@@ -75,49 +73,34 @@ body {
         color: white;
     }
 
-    .btn-registrarse:hover {
+    .btn-iniciar-sesion:hover {
         background-color: #E60000;
     }
 
-    .btn-registrarse:focus {
+    .btn-iniciar-sesion:focus {
         outline: none;
     }
 
-    .enlace-login{
+    .enlace-registro {
         text-align: center;
         margin-top: 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
     }
 
-    .enlace-login p{
+    .enlace-registro p{
         margin-bottom: 8px;
         color: #FFFFFF;
     }
 
-    .enlace-login a{
+    .enlace-registro a{
         text-decoration: none;
         color: #4F7DF3;
         font-weight: bold;
     }
-    .enlace-login a:hover{
+    .enlace-registro a:hover{
         text-decoration: underline;
-    }
-
-    .campo input:focus{
-        border-color: #C70000;
-        box-shadow: 0 0 5px rgba(79, 125, 243, 0.4);
-    }
-
-    .campo h1{
-        text-align: center;
-        color: #FF4D4D;
-        margin-bottom: 10px;
-    }
-
-    .campo h2{
-        text-align: center;
-        color: #FF4D4D;
-        margin-bottom: 30px;
-        font-weight: normal;
     }
 
 }

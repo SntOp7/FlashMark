@@ -1,4 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <meta charset="UTF-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inicio | FlashMark</title>
+
+    <link rel="stylesheet" href="/css/inicio.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>FlashMark</h1>
+        </div>
+
+        <div class="busqueda">
+            <input
+                type="text"
+                placeholder="Buscar productos...">
+        </div>
+
+        <div class="usuario">
+            <div class="estado"></div>
+            <span th:text="${usuario.nombre}">Usuario</span>
+            <img src="/img/user.png" alt="Foto de Perfil">
+        </div>
+    </header>
+    <div class="contenedor">
+        <aside>
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="/productos/publicar">Publicar producto</a>
+                    </li>
+
+                    <li>
+                        <a href="/productos/mis-productos">Mis productos</a>
+                    </li>
+
+                    <li>
+                        <a href="/chat">Chat</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+        <main>
+            <a href="/producto/detalle-producto" class="tarjeta">
+                <div class="imagen-producto">
+
+                    <img
+                            th:src="${producto.imagen}"
+                            src="/img/producto-default.png"
+                            alt="Producto">
+
+                </div>
+
+                <h3 th:text="${producto.nombre}">
+                    Nombre del producto
+                </h3>
+
+                <p th:text="${producto.precio}">
+                    Precio del producto
+                </p>
+            </a>
+
+        </main>
+    </div>
+</body>
 </html>

@@ -65,4 +65,18 @@ public class UsuarioServiceImpl implements UsuarioService {
     public List<Usuario> listarUsuarios() {
         return usuarioRepository.findAll();
     }
+
+    @Override
+    public Usuario iniciarSesion(String correo, String contrasenia) {
+        Usuario usuarioExistente = usuarioRepository.findByCorreo(correo);
+
+        if (usuarioExistente == null) {
+            throw new UsuarioNoEncontradoException("Usuario no encontrado");
+        }
+
+        if (!usuarioExistente.getPassword().equals(contrasenia)) {
+            throw new UsuarioNoEncontradoException("La contraseña no es correcta");
+        }
+        return usuarioExistente;
+    }
 }
